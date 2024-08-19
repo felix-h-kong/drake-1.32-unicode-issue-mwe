@@ -1,0 +1,39 @@
+<sdf version='1.11'>
+  <model name='myrobot'>
+    <link name='mylink'>
+      <pose >0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0.0097767966495151057 0 0.019792927833537609 0 0 0</pose>
+        <mass>0.088524499999999992</mass>
+        <inertia>
+          <ixx>5.8338432565199462e-05</ixx>
+          <ixy>0</ixy>
+          <ixz>-1.2351507115510401e-05</ixz>
+          <iyy>4.5422034908059353e-05</iyy>
+          <iyz>0</iyz>
+          <izz>4.6483602342859878e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='mylink_collision'>
+        <pose>-0.021072 -0.035 -0.021717 0 0 0 </pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>LinkB5_collision.vtk</uri>
+          </mesh>
+        </geometry>
+        <drake:proximity_properties>
+          <drake:compliant_hydroelastic/>
+          <drake:mu_dynamic>0.5</drake:mu_dynamic>
+          <drake:hydroelastic_modulus>5e7</drake:hydroelastic_modulus>
+          <drake:hunt_crossley_dissipation>1.25</drake:hunt_crossley_dissipation>
+        </drake:proximity_properties>
+      </collision>
+    </link>
+    
+    
+    
+    
+
+  </model>
+</sdf>
